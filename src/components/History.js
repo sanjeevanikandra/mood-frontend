@@ -16,7 +16,7 @@ const History = () => {
         try {
             const decodedToken = jwtDecode(token);
             const userId = decodedToken.id;
-            const response = await axios.get(`http://localhost:8080/${userId}`, {
+            const response = await axios.get(`https://mood-backend-3.onrender.com/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -41,7 +41,7 @@ const History = () => {
             const decodedToken = jwtDecode(token);
             const userId = decodedToken.id;
 
-            const response = await axios.delete(`http://localhost:8080/${userId}/${id}`, {
+            const response = await axios.delete(`https://mood-backend-3.onrender.com/${userId}/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
